@@ -1,0 +1,7 @@
+{
+  "name": "Access.ai: Personal Assistant for Pregnancy",
+  "description": "A comprehensive AI companion for pregnant women, providing support for health, nutrition, wellness, commuting, and baby preparation throughout their pregnancy journey.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

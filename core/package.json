@@ -1,0 +1,32 @@
+{
+  "name": "@access-ai/core",
+  "version": "1.0.0",
+  "description": "AI engine for Access.ai - Personal Assistant for Pregnancy",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "pregnancy",
+    "ai",
+    "assistant",
+    "gemini"
+  ],
+  "author": "Access.ai Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.27.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.2",
+    "@types/node": "^22.14.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
