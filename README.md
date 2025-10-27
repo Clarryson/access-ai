@@ -4,8 +4,6 @@
 
 # Access.ai - Personal Assistant for Pregnancy
 
-# Access.ai - Personal Pregnancy Assistant
-
 > 🤰 Your comprehensive AI companion throughout pregnancy - powered by Google Gemini Live API
 
 A voice-enabled personal assistant providing real-time support for health, nutrition, wellness, commute safety, baby preparation, and emergency contacts.
@@ -41,7 +39,7 @@ npm install
 
 2. **Configure environment**
 ```bash
-cp .env.local.example .env.local
+cp .env.example .env.local
 # Edit .env.local and add your GEMINI_API_KEY
 ```
 
