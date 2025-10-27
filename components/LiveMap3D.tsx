@@ -106,9 +106,9 @@ const LiveMap3D: React.FC<LiveMap3DProps> = ({ onClose, location, places, keepAu
   const decreaseTilt = () => setTilt(t => Math.max(t - 15, 0));
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col animate-fade-in bg-black/40 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex flex-col animate-fade-in bg-gradient-to-br from-sky-100 to-indigo-200">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600/95 to-indigo-600/95 backdrop-blur-md border-b border-white/20 p-3 shadow-2xl">
+      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 backdrop-blur-md border-b border-white/20 p-3 shadow-2xl">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex-1">
             <div className="flex items-center gap-2">
@@ -200,46 +200,46 @@ const LiveMap3D: React.FC<LiveMap3DProps> = ({ onClose, location, places, keepAu
         <div className="absolute bottom-6 right-4 flex flex-col gap-2">
           <button
             onClick={rotateCCW}
-            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110 border border-indigo-200"
             title="Rotate Left"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-indigo-600">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
             </svg>
           </button>
           <button
             onClick={rotateCW}
-            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110 border border-indigo-200"
             title="Rotate Right"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-indigo-600">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l6-6m0 0l-6-6m6 6H9a6 6 0 000 12h3" />
             </svg>
           </button>
           <button
             onClick={increaseTilt}
-            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110 border border-indigo-200"
             title="Increase Tilt"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-indigo-600">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
             </svg>
           </button>
           <button
             onClick={decreaseTilt}
-            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110 border border-indigo-200"
             title="Decrease Tilt"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-indigo-600">
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
           </button>
           <button
             onClick={toggleTilt}
-            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-white/95 hover:bg-white p-2.5 rounded-full shadow-xl transition-all hover:scale-110 border border-indigo-200"
             title={tilt === 0 ? "Enable 3D View" : "Top-Down View"}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-indigo-600">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
             </svg>
           </button>
@@ -248,7 +248,7 @@ const LiveMap3D: React.FC<LiveMap3DProps> = ({ onClose, location, places, keepAu
 
       {/* Info panel */}
       {markers.length > 0 && (
-        <div className="bg-gradient-to-r from-purple-600/95 to-indigo-600/95 backdrop-blur-md border-t border-white/20 p-3 max-h-40 overflow-y-auto">
+        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 backdrop-blur-md border-t border-white/20 p-3 max-h-40 overflow-y-auto">
           <div className="max-w-7xl mx-auto">
             <h3 className="text-white font-semibold mb-2 text-sm">
               {markers.length === 1 ? 'Location' : `${markers.length} Locations Found`}
